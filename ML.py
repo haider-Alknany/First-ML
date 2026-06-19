@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 from scipy import stats
 
-x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
-y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+x = [100, 120, 150, 150, 180, 200, 250]
+y = [85, 95, 115, 125, 140, 155, 180]
 
 slope, intercept, r, p, std_err = stats.linregress(x, y)
 
@@ -13,4 +13,5 @@ mymodel = list(map(myfunc, x))
 
 plt.scatter(x, y)
 plt.plot(x, mymodel)
+print(myfunc(225))
 plt.show()
